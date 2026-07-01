@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darakhshan Arshad — Python Developer &amp; Future AI Agent Engineer</title>
+  <meta name="description"
+    content="Portfolio of Darakhshan Arshad, a Computer Science student building toward a career in AI Agent Development and Machine Learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" aria-hidden="true">
+    <div class="loader-content">
+      <span class="loader-bracket">&lt;</span>
+      <span class="loader-text">DA</span>
+      <span class="loader-bracket">/&gt;</span>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Cursor Glow -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo"><span class="logo-bracket">&lt;</span>DA<span
+          class="logo-bracket">/&gt;</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">about</a></li>
+        <li><a href="#skills" class="nav-link">skills</a></li>
+        <li><a href="#journey" class="nav-link">journey</a></li>
+        <li><a href="#projects" class="nav-link">projects</a></li>
+        <li><a href="#github" class="nav-link">github</a></li>
+        <li><a href="#contact" class="nav-link">contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-small btn-outline nav-cta">say hello</a>
+      <button id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mobile-link">about</a></li>
+      <li><a href="#skills" class="mobile-link">skills</a></li>
+      <li><a href="#journey" class="mobile-link">journey</a></li>
+      <li><a href="#projects" class="mobile-link">projects</a></li>
+      <li><a href="#github" class="mobile-link">github</a></li>
+      <li><a href="#contact" class="mobile-link">contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <canvas id="particles-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+      <div class="hero-content container hero-content-split">
+        <div class="hero-text">
+          <p class="hero-eyebrow reveal-up">// hello world, my name is</p>
+          <h1 class="hero-name reveal-up">Darakhshan Arshad</h1>
+          <div class="hero-typing-wrap reveal-up">
+            <span class="hero-prompt">$</span>
+            <span id="typing-text" class="hero-typing"></span><span class="typing-cursor">|</span>
+          </div>
+          <p class="hero-tagline reveal-up">Building intelligent software one project at a time.</p>
+          <div class="hero-buttons reveal-up">
+            <a href="#projects" class="btn btn-primary ripple">View Projects</a>
+            <a href="assets/Darakhshan_Arshad_Resume.pdf" class="btn btn-outline ripple" download>Download Resume</a>
+            <a href="#contact" class="btn btn-ghost ripple">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-up" aria-hidden="true">
+          <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="heroAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#5b8cff" />
+                <stop offset="100%" stop-color="#9b6bff" />
+              </linearGradient>
+              <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#5b8cff" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#5b8cff" stop-opacity="0" />
+              </radialGradient>
+              <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <circle cx="300" cy="300" r="260" fill="url(#heroGlow)" />
+            <circle cx="300" cy="300" r="220" fill="none" stroke="#5b8cff" stroke-opacity="0.15" stroke-width="1"
+              stroke-dasharray="2 8" />
+            <circle cx="300" cy="300" r="180" fill="none" stroke="#9b6bff" stroke-opacity="0.18" stroke-width="1" />
+
+            <g stroke="url(#heroAccent)" stroke-opacity="0.4" stroke-width="1.2" fill="none">
+              <line x1="300" y1="300" x2="180" y2="180" />
+              <line x1="300" y1="300" x2="420" y2="180" />
+              <line x1="300" y1="300" x2="160" y2="320" />
+              <line x1="300" y1="300" x2="440" y2="320" />
+              <line x1="300" y1="300" x2="220" y2="440" />
+              <line x1="300" y1="300" x2="380" y2="440" />
+              <line x1="180" y1="180" x2="220" y2="440" stroke-opacity="0.15" />
+              <line x1="420" y1="180" x2="380" y2="440" stroke-opacity="0.15" />
+              <line x1="160" y1="320" x2="440" y2="320" stroke-opacity="0.15" />
+            </g>
+
+            <g filter="url(#softGlow)">
+              <circle cx="180" cy="180" r="7" fill="#5b8cff" />
+              <circle cx="420" cy="180" r="7" fill="#9b6bff" />
+              <circle cx="160" cy="320" r="6" fill="#9b6bff" />
+              <circle cx="440" cy="320" r="6" fill="#5b8cff" />
+              <circle cx="220" cy="440" r="6" fill="#5b8cff" />
+              <circle cx="380" cy="440" r="6" fill="#9b6bff" />
+            </g>
+
+            <g filter="url(#softGlow)">
+              <circle cx="300" cy="300" r="58" fill="#0d1320" stroke="url(#heroAccent)" stroke-width="2" />
+              <circle cx="300" cy="300" r="40" fill="url(#heroAccent)" fill-opacity="0.15" />
+              <text x="300" y="312" font-family="JetBrains Mono, monospace" font-size="30" font-weight="700"
+                fill="url(#heroAccent)" text-anchor="middle">&lt;/&gt;</text>
+            </g>
+
+            <g fill="#5b8cff">
+              <circle cx="300" cy="80" r="3" />
+              <circle cx="520" cy="300" r="3" />
+            </g>
+            <g fill="#9b6bff">
+              <circle cx="300" cy="520" r="3" />
+              <circle cx="80" cy="300" r="3" />
+            </g>
+
+            <g font-family="JetBrains Mono, monospace" font-size="13" fill="#8b97b3">
+              <text x="100" y="160">Python</text>
+              <text x="430" y="160">AI Agents</text>
+              <text x="60" y="345">Automation</text>
+              <text x="460" y="345">ML</text>
+              <text x="170" y="465">LLMs</text>
+              <text x="370" y="465">APIs</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span class="scroll-mouse"><span class="scroll-dot"></span></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// about</p>
+        <h2 class="section-title reveal-up">Who I am</h2>
+        <div class="about-grid">
+          <div class="about-text reveal-up">
+            <p>I am a Computer Science student passionate about Artificial Intelligence and Python programming.</p>
+            <p>Currently I am strengthening my software engineering fundamentals while gradually moving toward AI Agent
+              Development and Machine Learning.</p>
+            <p>I enjoy solving programming problems, building practical projects, and continuously learning new
+              technologies.</p>
+            <p>My goal is to build intelligent systems that can automate tasks and solve real-world problems.</p>
+            <div class="about-meta">
+              <div class="meta-item">
+                <span class="meta-label">Status</span>
+                <span class="meta-value">BS Computer Science Student</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Goal</span>
+                <span class="meta-value">AI Agent Developer &amp; ML Engineer</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Focus</span>
+                <span class="meta-value">Python · AI Agents · Automation</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual reveal-up">
+            <div class="code-card glass-card tilt-card">
+              <div class="code-card-header">
+                <span class="code-dot red"></span><span class="code-dot yellow"></span><span
+                  class="code-dot green"></span>
+                <span class="code-card-filename">profile.py</span>
+              </div>
+              <pre class="code-card-body"><code><span class="cm">class</span> <span class="cl">Developer</span>:
+    <span class="cm">def</span> <span class="fn">__init__</span>(self):
+        self.name = <span class="st">"Darakhshan Arshad"</span>
+        self.role = <span class="st">"Python Developer"</span>
+        self.goal = <span class="st">"AI Agent Engineer"</span>
+        self.learning = [
+            <span class="st">"AI Agents"</span>,
+            <span class="st">"Machine Learning"</span>,
+            <span class="st">"LLM Apps"</span>
+        ]
+
+    <span class="cm">def</span> <span class="fn">mindset</span>(self):
+        <span class="kw">return</span> <span class="st">"Consistent learning."</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// skills</p>
+        <h2 class="section-title reveal-up">What I work with</h2>
+        <div class="skills-grid">
+
+          <div class="skill-category glass-card tilt-card reveal-up">
+            <h3 class="skill-cat-title"><span class="skill-icon">⌘</span> Programming</h3>
+            <ul class="skill-list">
+              <li><span class="skill-name">Python</span><span class="skill-bar"><span class="skill-fill"
+                    data-level="85"></span></span></li>
+              <li><span class="skill-name">HTML</span><span class="skill-bar"><span class="skill-fill"
+                    data-level="75"></span></span></li>
+              <li><span class="skill-name">CSS</span><span class="skill-bar"><span class="skill-fill"
+                    data-level="70"></span></span></li>
+              <li><span class="skill-name">JavaScript <em>(learning)</em></span><span class="skill-bar"><span
+                    class="skill-fill" data-level="40"></span></span></li>
+              <li><span class="skill-name">Git</span><span class="skill-bar"><span class="skill-fill"
+                    data-level="55"></span></span></li>
+              <li><span class="skill-name">GitHub</span><span class="skill-bar"><span class="skill-fill"
+                    data-level="60"></span></span></li>
+            </ul>
+          </div>
+
+          <div class="skill-category glass-card tilt-card reveal-up">
+            <h3 class="skill-cat-title"><span class="skill-icon">◈</span> Future Technologies</h3>
+            <ul class="skill-list skill-list-tags">
+              <li class="skill-tag">Machine Learning</li>
+              <li class="skill-tag">AI Agents</li>
+              <li class="skill-tag">LLMs</li>
+              <li class="skill-tag">Automation</li>
+              <li class="skill-tag">Databases</li>
+              <li class="skill-tag">REST APIs</li>
+            </ul>
+          </div>
+
+          <div class="skill-category glass-card tilt-card reveal-up">
+            <h3 class="skill-cat-title"><span class="skill-icon">◎</span> Soft Skills</h3>
+            <ul class="skill-list skill-list-tags">
+              <li class="skill-tag">Communication</li>
+              <li class="skill-tag">Problem Solving</li>
+              <li class="skill-tag">Teamwork</li>
+              <li class="skill-tag">Continuous Learning</li>
+              <li class="skill-tag">Time Management</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNING JOURNEY -->
+    <section id="journey" class="section journey">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// learning journey</p>
+        <h2 class="section-title reveal-up">Where I'm headed</h2>
+        <div class="timeline">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <div class="timeline-group reveal-up">
+            <div class="timeline-marker done"></div>
+            <h3 class="timeline-status">Completed</h3>
+            <ul class="timeline-list">
+              <li><span class="check">✔</span> Python Fundamentals</li>
+              <li><span class="check">✔</span> Object-Oriented Programming</li>
+              <li><span class="check">✔</span> Problem Solving</li>
+              <li><span class="check">✔</span> Basic Programming Projects</li>
+            </ul>
+          </div>
+
+          <div class="timeline-group reveal-up">
+            <div class="timeline-marker current"></div>
+            <h3 class="timeline-status">Current</h3>
+            <ul class="timeline-list">
+              <li><span class="dot-pulse"></span> Learning AI Agents</li>
+              <li><span class="dot-pulse"></span> Learning Git</li>
+              <li><span class="dot-pulse"></span> Learning Databases</li>
+            </ul>
+          </div>
+
+          <div class="timeline-group reveal-up">
+            <div class="timeline-marker upcoming"></div>
+            <h3 class="timeline-status">Upcoming</h3>
+            <ul class="timeline-list muted-list">
+              <li>Machine Learning</li>
+              <li>Deep Learning</li>
+              <li>LangChain</li>
+              <li>MCP</li>
+              <li>FastAPI</li>
+              <li>Cloud Deployment</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// projects</p>
+        <h2 class="section-title reveal-up">Things I've built</h2>
+        <div class="projects-grid">
+
+          <article class="project-card glass-card tilt-card reveal-up project-card-featured">
+            <div class="project-image project-image-photo">
+              <img src="assets/images/portfolio-banner.svg" alt="Darakhshan Arshad portfolio website banner"
+                loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-title">AI-Inspired Portfolio Website</h3>
+                <span class="status-badge status-done">Completed</span>
+              </div>
+              <p class="project-desc">This very site — a responsive, dark-mode portfolio built from scratch with custom
+                animations, particle effects, and glassmorphism UI.</p>
+              <div class="tech-badges"><span class="tech-badge">HTML5</span><span class="tech-badge">CSS3</span><span
+                  class="tech-badge">JavaScript</span></div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-outline">GitHub</a>
+                <a href="#hero" class="btn btn-small btn-ghost">You're Here</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- <article class="project-card glass-card tilt-card reveal-up">
+            <div class="project-image"><span class="project-image-glyph">🐍</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-title">Python Automation Toolkit</h3>
+                <span class="status-badge status-done">Completed</span>
+              </div>
+              <p class="project-desc">Collection of useful automation scripts built using Python.</p>
+              <div class="tech-badges"><span class="tech-badge">Python</span></div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-outline">GitHub</a>
+                <a href="#" class="btn btn-small btn-ghost">Live Demo</a>
+              </div>
+            </div>
+          </article> -->
+
+          <!-- <article class="project-card glass-card tilt-card reveal-up">
+            <div class="project-image"><span class="project-image-glyph">🗂️</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-title">Smart File Organizer</h3>
+                <span class="status-badge status-done">Completed</span>
+              </div>
+              <p class="project-desc">Automatically organize files into folders based on extensions.</p>
+              <div class="tech-badges"><span class="tech-badge">Python</span></div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-outline">GitHub</a>
+                <a href="#" class="btn btn-small btn-ghost">Live Demo</a>
+              </div>
+            </div>
+          </article> -->
+
+          <!-- <article class="project-card glass-card tilt-card reveal-up">
+            <div class="project-image"><span class="project-image-glyph">🤖</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-title">AI Chat Assistant</h3>
+                <span class="status-badge status-soon">Coming Soon</span>
+              </div>
+              <p class="project-desc">An AI-powered assistant using modern LLM APIs.</p>
+              <div class="tech-badges"><span class="tech-badge">LLM API</span></div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-outline disabled">GitHub</a>
+                <a href="#" class="btn btn-small btn-ghost disabled">Live Demo</a>
+              </div>
+            </div>
+          </article> -->
+
+          <!-- <article class="project-card glass-card tilt-card reveal-up">
+            <div class="project-image"><span class="project-image-glyph">🧠</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-title">Personal AI Agent</h3>
+                <span class="status-badge status-progress">In Development</span>
+              </div>
+              <p class="project-desc">An intelligent AI agent capable of task planning and automation.</p>
+              <div class="tech-badges"><span class="tech-badge">Python</span><span class="tech-badge">AI Agents</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-outline disabled">GitHub</a>
+                <a href="#" class="btn btn-small btn-ghost disabled">Live Demo</a>
+              </div>
+            </div>
+          </article> -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// experience</p>
+        <h2 class="section-title reveal-up">Currently seeking</h2>
+        <div class="seeking-grid">
+          <div class="seeking-card glass-card reveal-up"><span class="seeking-icon">💼</span><span>Internships</span>
+          </div>
+          <div class="seeking-card glass-card reveal-up"><span class="seeking-icon">🌐</span><span>Open Source
+              Contributions</span></div>
+          <div class="seeking-card glass-card reveal-up"><span class="seeking-icon">🤝</span><span>Freelance
+              Opportunities</span></div>
+          <div class="seeking-card glass-card reveal-up"><span class="seeking-icon">🔬</span><span>AI Research
+              Collaborations</span></div>
+        </div>
+        <p class="experience-note reveal-up">"I believe consistent learning and building real projects create meaningful
+          experience."</p>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="section stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="1">0</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="20">0</span>
+            <span class="stat-label">Python Hours</span>
+          </div>
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">Technologies Learning</span>
+          </div>
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="4">0</span>
+            <span class="stat-label">GitHub Repositories</span>
+          </div>
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="1">0</span>
+            <span class="stat-label">Years of Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB -->
+    <section id="github" class="section github">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// github</p>
+        <h2 class="section-title reveal-up">Find me on GitHub</h2>
+        <div class="github-card glass-card reveal-up">
+          <div class="github-card-left">
+            <div class="github-avatar">DA</div>
+            <h3>Darakhshan Arshad</h3>
+            <p class="github-handle">@darakhshan-arshad</p>
+            <a href="https://github.com/" class="btn btn-primary ripple" target="_blank" rel="noopener">Visit GitHub</a>
+          </div>
+          <div class="github-card-right">
+            <h4 class="github-subtitle">Latest Repositories</h4>
+            <ul class="repo-list">
+              <li class="repo-item"><span class="repo-name">python-automation-toolkit</span><span class="repo-lang"><i
+                    class="lang-dot python-dot"></i>Python</span></li>
+              <li class="repo-item"><span class="repo-name">smart-file-organizer</span><span class="repo-lang"><i
+                    class="lang-dot python-dot"></i>Python</span></li>
+              <li class="repo-item"><span class="repo-name">personal-ai-agent</span><span class="repo-lang"><i
+                    class="lang-dot python-dot"></i>Python</span></li>
+            </ul>
+            <h4 class="github-subtitle">Contribution Graph</h4>
+            <div class="contribution-graph" id="contribution-graph" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// contact</p>
+        <h2 class="section-title reveal-up">Let's build something</h2>
+        <div class="contact-grid">
+          <form class="contact-form glass-card reveal-up" id="contact-form">
+            <div class="form-row">
+              <label for="form-name">Name</label>
+              <input type="text" id="form-name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-row">
+              <label for="form-email">Email</label>
+              <input type="email" id="form-email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-row">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" name="subject" required placeholder="What's this about?">
+            </div>
+            <div class="form-row">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="5" required placeholder="Tell me about it"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary ripple form-submit">Send Message</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+
+          <div class="contact-info reveal-up">
+            <a href="mailto:darakhshan.arshad@example.com" class="contact-item glass-card tilt-card">
+              <span class="contact-icon">✉</span>
+              <div><span class="contact-label">Email</span><span
+                  class="contact-value">darakhshan.arshad@example.com</span></div>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="contact-item glass-card tilt-card">
+              <span class="contact-icon">⌥</span>
+              <div><span class="contact-label">GitHub</span><span
+                  class="contact-value">github.com/darakhshan-arshad</span></div>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-item glass-card tilt-card">
+              <span class="contact-icon">in</span>
+              <div><span class="contact-label">LinkedIn</span><span
+                  class="contact-value">linkedin.com/in/darakhshan-arshad</span></div>
+            </a>
+            <div class="contact-item glass-card tilt-card">
+              <span class="contact-icon">⌖</span>
+              <div><span class="contact-label">Location</span><span class="contact-value">Pakistan</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo"><span class="logo-bracket">&lt;</span>DA<span
+            class="logo-bracket">/&gt;</span></a>
+        <p class="footer-quote">"Learning never stops. Every project is one step closer to building intelligent
+          systems."</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#journey">Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">⌥</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="mailto:darakhshan.arshad@example.com" aria-label="Email">✉</a>
+      </div>
+    </div>
+    <p class="footer-copyright">© <span id="footer-year"></span> Darakhshan Arshad. Built with HTML, CSS &amp;
+      JavaScript.</p>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
