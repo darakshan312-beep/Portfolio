@@ -145,9 +145,7 @@ Search for these in `index.html` and replace with your actual links:
 
 ---
 
-## 🌐 Live Demo
-
-Coming soon — will be deployed on GitHub Pages.
+🌐 **Live Demo:** [View Website](https://darakshan312-beep.github.io/Portfolio/)
 
 ---
 
